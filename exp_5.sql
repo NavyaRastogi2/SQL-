@@ -1,14 +1,4 @@
--- ==========================================
--- EXERCISE: SQL FUNCTIONS - SOLUTIONS
--- Platform : Oracle FreeSQL (Oracle SQL)
--- Table    : EMPLOYEE
--- ==========================================
 
-
--- ==========================================
--- 0. SETUP
--- ==========================================
--- (Ignore the "table does not exist" error from DROP on a first run.)
 
 DROP TABLE EMPLOYEE;
 
@@ -187,11 +177,7 @@ FROM EMPLOYEE;
 SELECT emp_name, join_date,
        TRUNC(SYSDATE) - join_date AS Days_Difference
 FROM EMPLOYEE;
-
-
--- ==========================================
--- CHALLENGE EXERCISES
--- ==========================================
+------------------------------------------------------------------
 
 -- 1. Employees whose salary is greater than the average salary
 SELECT emp_name, salary
@@ -218,6 +204,3 @@ FROM EMPLOYEE
 WHERE join_date < TO_DATE('01-01-2022', 'DD-MM-YYYY');
 
 
--- ==========================================
--- END OF SOLUTIONS
--- ==========================================
