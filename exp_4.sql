@@ -1,14 +1,4 @@
--- ==========================================
--- EXERCISE: SQL OPERATORS - SOLUTIONS
--- Platform : Oracle FreeSQL (Oracle SQL)
--- Table    : Product, Online_Product, Store_Product
--- ==========================================
 
-
--- ==========================================
--- 0. SETUP
--- ==========================================
--- (Ignore "table does not exist" errors from DROP on a first run.)
 
 DROP TABLE Product;
 DROP TABLE Online_Product;
@@ -205,7 +195,3 @@ SELECT product_name FROM Online_Product
 MINUS
 SELECT product_name FROM Store_Product;
 
-
--- ==========================================
--- END OF SOLUTIONS
--- ==========================================
