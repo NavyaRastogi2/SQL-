@@ -1,16 +1,4 @@
--- ==========================================
--- EXPERIMENT: SQL JOINS - EXERCISE SOLUTIONS
--- Platform : Oracle FreeSQL (Oracle SQL)
--- Tables   : STUDENT_JK, DEPARTMENT_JK
--- ==========================================
-
-
--- ==========================================
--- 0. SETUP
--- ==========================================
--- DEPARTMENT_JK was also used in the earlier Employee_JK
--- experiment, so drop old copies first.
--- (Ignore the "table does not exist" error on a first run.)
+--
 
 DROP TABLE STUDENT_JK;
 DROP TABLE DEPARTMENT_JK;
@@ -227,8 +215,7 @@ ON D.dept_id = S.dept_id;
 -- ADVANCED JOIN PRACTICE
 -- ==========================================
 
--- Q16. NATURAL JOIN (joins automatically on the common column DEPT_ID)
--- Note: do not put a table alias before dept_id in a NATURAL JOIN.
+-- Q16. NATURAL JOIN 
 SELECT
     student_name,
     dept_name
@@ -246,8 +233,7 @@ JOIN DEPARTMENT_JK D
 USING (dept_id);
 
 
--- Q18. CROSS JOIN: every student combined with every department
---      (7 students x 6 departments = 42 rows)
+-- Q18. CROSS JOIN:
 SELECT
     S.student_name,
     D.dept_name
@@ -348,7 +334,3 @@ ON D.dept_id = S.dept_id
 WHERE D.location = 'Jaipur'
 GROUP BY D.dept_name, D.location;
 
-
--- ==========================================
--- END OF SOLUTIONS
--- ==========================================
