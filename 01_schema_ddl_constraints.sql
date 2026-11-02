@@ -1,13 +1,3 @@
--- EXPERIMENT 1: DDL
--- EXPERIMENT 8: CONSTRAINTS
--- Run this file first in your own Oracle schema.
-
--- Clean-up section for re-running the project.
--- Run only if these tables already exist and you are happy to delete their data.
--- DROP TABLE applications CASCADE CONSTRAINTS;
--- DROP TABLE jobs CASCADE CONSTRAINTS;
--- DROP TABLE companies CASCADE CONSTRAINTS;
--- DROP TABLE students CASCADE CONSTRAINTS;
 
 CREATE TABLE students (
     student_id       NUMBER(5) CONSTRAINT pk_students PRIMARY KEY,
